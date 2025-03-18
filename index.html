@@ -20,10 +20,19 @@
     But grid lines are transparent!
     */
 
+    /* use flexbox to display the items in the center of the grid */
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0;
+      padding: 0;
+    }
+
     /* class for the grid div  */
     .container {
 
-      height: 100vh;
+      /* height: 100vh; */
 
       /* create the grid */
       display: grid;
@@ -36,6 +45,9 @@
 
       /* thickness of the lines that separate the tracks (rows & columns) */
       gap: 9px;
+
+      /* allows the lines that separate the tracks to appear black */
+      background-color: black;
 
     }
 
@@ -116,7 +128,7 @@
   <!-- Write your HTML here -->
 
   <!-- div that's the container for the grid -->
-  <div class="container">
+  <div class="container body">
     <div class="first"></div>
     <div class="second white"></div>
     <div class="third white"></div>
