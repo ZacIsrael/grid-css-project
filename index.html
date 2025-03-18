@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mondrian Project</title>
+  <style>
+    /* 
+    Write your CSS here 
+    Gap Colour: #000
+    White: #F0F1EC
+    Red: #E72F24
+    Black: #232629
+    Blue: #004592
+    Yellow: #F9D01E
+
+    For dimensions, see dimensions.png image.
+    HINT: Remember you can't change the properties of grid lines.
+    But grid lines are transparent!
+    */
+
+    /* class for the grid div  */
+    .container {
+
+      height: 100vh;
+
+      /* create the grid */
+      display: grid;
+
+      /* 4 columns with different widths */
+      grid-template-columns: 320px 198px 153px 50px;
+
+      /* 4 rows with different heights  */
+      grid-template-rows: 414px 130px 155px 20px;
+
+      /* thickness of the lines that separate the tracks (rows & columns) */
+      gap: 9px;
+
+    }
+
+    /* class for the first item (red) */
+    .first {
+      background-color: #E72F24;
+
+     /* (grid row start, grid column start, grid row end, grid column end) */
+      grid-area: 1 / 1 / 2 / 2;
+    }
+
+    .white {
+      background-color: #F0F1EC;
+    }
+    /* class for the second item (white) */
+    .second {
+
+     /* (grid row start, grid column start, grid row end, grid column end) */
+      grid-area: 1 / 2 / 2 / -1;
+    }
+
+    /* class for the third item (white) */
+    .third {
+      
+     /* (grid row start, grid column start, grid row end, grid column end) */
+      grid-area: 2 / 1 / 4 / 2;
+    }
+
+    /* class for the fourth item (white) */
+    .fourth {
+      
+      /* (grid row start, grid column start, grid row end, grid column end) */
+       grid-area: 2 / 2 / 4 / 4;
+     }
+
+     /* class for the fifth item (blue) */
+     .fifth {
+      background-color: #004592;
+
+      /* (grid row start, grid column start, grid row end, grid column end) */
+      grid-area: 2 / 4 / 3 / -1;
+
+      /* add solid black border to the bottom of the fifth item */
+      border-bottom: 10px solid #000;
+     }
+
+     /* class for the sixth item (white) */
+     .sixth {
+
+      /* (grid row start, grid column start, grid row end, grid column end) */
+      grid-area: 4 / 1 / -1 / 2;
+     }
+
+      /* class for the seventh item (yellow) */
+    .seventh {
+      background-color: #F9D01E;
+      /* (grid row start, grid column start, grid row end, grid column end) */
+      grid-area: 4 / 2 / -1 / 3;
+    }
+    /* class for the eighth item (black) */
+    .eighth {
+      background-color: #232629;
+
+      /* (grid row start, grid column start, grid row end, grid column end) */
+      grid-area: 4 / 3 / -1 / 4;
+    }
+
+    /* class for the ninth item (yellow) */
+    .ninth {
+
+      /* (grid row start, grid column start, grid row end, grid column end) */
+      grid-area: 3 / 4 / -1 / -1;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Write your HTML here -->
+
+  <!-- div that's the container for the grid -->
+  <div class="container">
+    <div class="first"></div>
+    <div class="second white"></div>
+    <div class="third white"></div>
+    <div class="fourth white"></div>
+    <div class="fifth"></div>
+    <div class="sixth white"></div>
+    <div class="seventh"></div>
+    <div class="eighth"></div>
+    <div class="ninth white"></div>
+  </div>
+</body>
+
+</html>
